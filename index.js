@@ -191,11 +191,11 @@ async function main(){
         console.log("companies exist on only lever ----> ",categorizedCompanies.onlyLever.length);
         
         // green house exist companies stored in a file
-        fs.appendFileSync('greenhouse.txt', uniqueGreenhouseCompanies.join('\n'));
+        fs.appendFileSync('greenhouse.txt', '\n' + uniqueGreenhouseCompanies.join('\n'));
         // lever exist companies stored in a file
-        fs.appendFileSync('lever.txt', uniqueLeverCompanies.join('\n'));
+        fs.appendFileSync('lever.txt', '\n' + uniqueLeverCompanies.join('\n'));
         // both exist companies stored in a file
-        fs.appendFileSync('both.txt', categorizedCompanies.both.join('\n'));
+        fs.appendFileSync('both.txt', '\n' + categorizedCompanies.both.join('\n'));
       
     } catch (error) {
         console.error("Error inside main file", error);
@@ -213,6 +213,8 @@ nodeCron.schedule('*/60 * * * * *', async () => {
     await main();
     console.log("-----------------------------------------------")
 });
+
+// main();
 
 
 
