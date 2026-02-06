@@ -140,7 +140,7 @@ async function checkCompaniesInLevel(companies){
     await Promise.all(
       companies.map(async (companyName) => {
         try {
-            console.log("checking company ----> ",companyName);
+            // console.log("checking company ----> ",compan yName);
           const apiUrl = `https://api.lever.co/v0/postings/${companyName}?mode=json`;
           await axios.get(apiUrl);
           companiesList.push(companyName);
@@ -170,7 +170,8 @@ function categorizeCompanies(greenhouseCompanies, leverCompanies) {
 
 async function main(){
     try {
-        const companiesUsingGoogleGenAI = await fetchCompaniesUsingGoogleGenAI();
+        // const companiesUsingGoogleGenAI = await fetchCompaniesUsingGoogleGenAI();
+        const companiesUsingGoogleGenAI = [];
         const companiesUsingOllama = await fetchCompaniesUsingOllama();
         console.log("companies length using google gen ai ----> ",companiesUsingGoogleGenAI.length);
         console.log("companies length using ollama ----> ",companiesUsingOllama.length);
