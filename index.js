@@ -205,8 +205,8 @@ async function main(){
 
 
 let count=1;
-// run every 30s to fetch the new companies
-nodeCron.schedule('*/10 * * * * *', async () => {
+// run every 60s to fetch the new companies
+nodeCron.schedule('*/60 * * * * *', async () => {
     console.log("fetching times ", count," total fetched count", totalFetchedCount);
     count++;
     await main();
