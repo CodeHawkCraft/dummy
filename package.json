@@ -17,7 +17,6 @@
     "dotenv": "^17.2.4",
     "node-cron": "^4.2.1",
     "nodemon": "^3.1.11",
-    "ollama": "^0.6.3",
-    "puppeteer": "^24.37.1"
+    "ollama": "^0.6.3"
   }
 }
