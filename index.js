@@ -191,11 +191,11 @@ async function main(){
         console.log("companies exist on only lever ----> ",categorizedCompanies.onlyLever.length);
         
         // green house exist companies stored in a file
-        fs.writeFileSync('greenhouse.txt', uniqueGreenhouseCompanies.join('\n'));
+        fs.appendFileSync('greenhouse.txt', uniqueGreenhouseCompanies.join('\n'));
         // lever exist companies stored in a file
-        fs.writeFileSync('lever.txt', uniqueLeverCompanies.join('\n'));
+        fs.appendFileSync('lever.txt', uniqueLeverCompanies.join('\n'));
         // both exist companies stored in a file
-        fs.writeFileSync('both.txt', categorizedCompanies.both.join('\n'));
+        fs.appendFileSync('both.txt', categorizedCompanies.both.join('\n'));
       
     } catch (error) {
         console.error("Error inside main file", error);
