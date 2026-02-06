@@ -1,0 +1,23 @@
+{
+  "name": "comapny-fetcher",
+  "version": "1.0.0",
+  "description": "we are building a fullstack application in mern tech stack  where we will show all the job posting that are related healthcare sectors in different states of USA like florida etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^1.40.0",
+    "axios": "^1.13.4",
+    "dotenv": "^17.2.4",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.11",
+    "ollama": "^0.6.3",
+    "puppeteer": "^24.37.1"
+  }
+}
